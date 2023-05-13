@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import "../components/Welcome.css";
+import QuestionsScreen from "./QuestionsScreen";
 
 function WelcomeScreenRules() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleVisibility = () => {
+        setIsVisible(true);
+    };
+
     return (
         <div className="welcome-rules-div">
             <h1>Quiz Rules</h1>
@@ -28,8 +36,9 @@ function WelcomeScreenRules() {
                 </div>
             </div>
             <div>
-                <button>Start</button>
+                <button onClick={handleVisibility}>Start</button>
             </div>
+            {isVisible ? <QuestionsScreen /> : null}
         </div>
     );
 }

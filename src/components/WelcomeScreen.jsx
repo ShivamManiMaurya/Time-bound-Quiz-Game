@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WelcomeScreenRules from "./WelcomeScreenRules";
+import "../components/Welcome.css";
 
 function WelcomeScreen() {
     const [viewRules, setViewRules] = useState(false);
