@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import QuestionsScreen from "./QuestionsScreen";
 
 function EndScreen({ score }) {
-    return (
+    const [isRestart, setIsRestart] = useState(false);
+
+    const handleRestart = () => {
+        setIsRestart(true);
+    };
+
+    return isRestart ? (
+        <QuestionsScreen />
+    ) : (
         <div className="end">
             {score >= 3 ? (
                 <div className="won">
@@ -14,6 +23,7 @@ function EndScreen({ score }) {
                             <p>points</p>
                         </div>
                     </div>
+                    <button onClick={handleRestart}>Restart</button>
                 </div>
             ) : (
                 <div className="lose">
@@ -26,6 +36,7 @@ function EndScreen({ score }) {
                             <p>points</p>
                         </div>
                     </div>
+                    <button onClick={handleRestart}>Restart</button>
                 </div>
             )}
         </div>

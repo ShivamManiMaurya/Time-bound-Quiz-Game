@@ -7,6 +7,8 @@ function QuestionsScreen() {
     const [isQuizEnd, setIsQuizEnd] = useState(false);
     const [score, setScore] = useState(0);
     const [isQuizTime, setIsQuizTime] = useState(false);
+    const time = 5;
+    const [count, setCount] = useState(time);
 
     const handleAnswer = (isCorrect) => {
         if (isCorrect) {
@@ -18,27 +20,37 @@ function QuestionsScreen() {
         console.log(questionNumber);
         if (questionNumber < questions.length) {
             setCurrentQuestion(questionNumber);
+            setCount(time);
         } else {
             setIsQuizEnd(true);
         }
     };
-    const [count, setCount] = useState(5);
-
-    // setTimeout(() => {
-    //     setCount(count - 1);
-    // }, 1000);
 
     useEffect(() => {
-        const timer = setInterval(() => {
+        const timer = setTimeout(() => {
+            const timeInSec = count - 1;
+            // if (timeInSec < 3) {
+            //     setCount(time);
+            // }
+            setCount(timeInSec);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [count]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
             const questionNumber = currentQuestion + 1;
             if (questionNumber < questions.length) {
                 setCurrentQuestion(questionNumber);
+                setCount(time);
+                console.log("que num = ", questionNumber);
             } else {
                 setIsQuizEnd(true);
             }
             // setCount(count + 1);
             // console.log(count);
-        }, 3000);
+        }, 5000);
 
         // const waqt = setTimeout(() => {
         //     console.log("30 seconds");
@@ -46,7 +58,7 @@ function QuestionsScreen() {
         // }, 30000);
 
         return () => clearInterval(timer);
-    }, [currentQuestion, count]);
+    }, [currentQuestion]);
 
     ///////////////////////////////////
 
@@ -71,7 +83,10 @@ function QuestionsScreen() {
             <div className="option-section">
                 {questions[currentQuestion].options.map((options) => {
                     return (
-                        <button onClick={() => handleAnswer(options.isCorrect)}>
+                        <button
+                            key={options.optId}
+                            onClick={() => handleAnswer(options.isCorrect)}
+                        >
                             {options.optionText}
                         </button>
                     );
