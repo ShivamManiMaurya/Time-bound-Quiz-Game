@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WelcomeScreenRules from "./WelcomeScreenRules";
-import "../components/Welcome.css";
+import "../components/styles/Welcome.css";
 
 function WelcomeScreen() {
     const [viewRules, setViewRules] = useState(false);
@@ -12,12 +12,23 @@ function WelcomeScreen() {
     return (
         <div className="welcome">
             <div className="welcome-main-div">
-                <h1>Welcome to the Superhero Quiz Game!</h1>
-                <h3>
-                    Are you ready to test your knowledge of superheroes, comic
-                    books, and movies?
-                </h3>
-                <button onClick={handleRules}>Take Quiz</button>
+                <h1>
+                    <span>Welcome</span>
+                    <br />
+                    to the <span className="superhero-span">Superhero</span>
+                    <br />
+                    Quiz Game!
+                </h1>
+                <div className="welcome-main-h3-div">
+                    <h3>
+                        How much of a geek
+                        <br /> are you of superheroes,
+                        <br /> comic books, and movies?
+                    </h3>
+                </div>
+                <button className="welcome-take-quiz-btn" onClick={handleRules}>
+                    Take Quiz
+                </button>
             </div>
             {viewRules ? <WelcomeScreenRules /> : null}
         </div>

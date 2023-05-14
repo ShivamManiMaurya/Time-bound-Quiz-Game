@@ -1,0 +1,135 @@
+.welcome {
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background-image: url("/src/assets/images/coverImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome-main-div h1 {
+  text-shadow:
+				-1px -1px 0 white,
+				1px -1px 0 white,
+				-1px 1px 0 white,
+				1px 1px 0 white;
+  line-height: 1.5;
+  font-size: 36px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
+}
+
+.welcome-main-div h1 span {
+  font-size: 48px;
+}
+
+.superhero-span {
+  color: red;
+  box-shadow: 0px 5px 5px black;
+}
+
+.welcome-main-h3-div {
+  color: white;
+}
+
+.welcome-main-h3-div h3 {
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-family: serif;
+  text-shadow:
+  -1.5px -1.5px 4px black,
+  1.5px -1.5px 4px black,
+  -1.5px 1.5px 4px black,
+  1.5px 1.5px 4px black;
+  
+}
+
+.welcome-take-quiz-btn {
+  /* background-color: red; */
+  padding: 3% 7%;
+  border-radius: 50px;
+  background: linear-gradient(345deg, rgb(134, 1, 1), red);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 25px black;
+  border: 0.5rem outset red;
+}
+
+.welcome-take-quiz-btn:hover {
+  border: 0.5rem inset red;
+  box-shadow: 0px 0px 25px rgb(91, 91, 91);
+  background: linear-gradient(345deg, red, rgb(134, 1, 1));
+}
+
+.welcome-take-quiz-btn:active {
+  background: rgb(134, 1, 1);
+  box-shadow: 0px 0px 25px gray;
+}
+
+.welcome-rules-div {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    animation: bounce-from-bottom 1.1s both;
+    padding-bottom: 5%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
+
+@keyframes bounce-from-bottom {
+    0% {
+              transform: translateY(500px);
+              animation-timing-function: ease-in;
+    }
+    40% {
+              transform: translateY(0);
+              animation-timing-function: ease-out;
+    }
+    55% {
+              transform: translateY(65px);
+              animation-timing-function: ease-in;
+    }
+    70% {
+              transform: translateY(0);
+              animation-timing-function: ease-out;
+    }
+    80% {
+              transform: translateY(28px);
+              animation-timing-function: ease-in;
+    }
+    90% {
+              transform: translateY(0);
+              animation-timing-function: ease-out;
+    }
+    95% {
+              transform: translateY(8px);
+              animation-timing-function: ease-in;
+    }
+    100% {
+              transform: translateY(0);
+              animation-timing-function: ease-out;
+    }
+  }
+/* 
+@keyframes scale-in-ver-bottom {
+    0% {
+              transform: scaleY(0);
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+              transform: scaleY(1);
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+  } */
+
+.welcome-main-div {
+    /* position:absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../components/Welcome.css";
+import "../components/styles/Welcome.css";
 import QuestionsScreen from "./QuestionsScreen";
 
 function WelcomeScreenRules() {

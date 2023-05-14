@@ -3,12 +3,11 @@ import questions from "./questionsData";
 import EndScreen from "./EndScreen";
 
 function QuestionsScreen() {
+    const time = 5;
+    const [count, setCount] = useState(time);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isQuizEnd, setIsQuizEnd] = useState(false);
     const [score, setScore] = useState(0);
-    const [isQuizTime, setIsQuizTime] = useState(false);
-    const time = 5;
-    const [count, setCount] = useState(time);
 
     const handleAnswer = (isCorrect) => {
         if (isCorrect) {
@@ -29,13 +28,10 @@ function QuestionsScreen() {
     useEffect(() => {
         const timer = setTimeout(() => {
             const timeInSec = count - 1;
-            // if (timeInSec < 3) {
-            //     setCount(time);
-            // }
             setCount(timeInSec);
         }, 1000);
 
-        return () => clearInterval(timer);
+        return () => clearTimeout(timer);
     }, [count]);
 
     useEffect(() => {
@@ -48,26 +44,10 @@ function QuestionsScreen() {
             } else {
                 setIsQuizEnd(true);
             }
-            // setCount(count + 1);
-            // console.log(count);
         }, 5000);
 
-        // const waqt = setTimeout(() => {
-        //     console.log("30 seconds");
-        //     setCount(count + 1);
-        // }, 30000);
-
-        return () => clearInterval(timer);
+        return () => clearTimeout(timer);
     }, [currentQuestion]);
-
-    ///////////////////////////////////
-
-    // useEffect(() => {
-
-    // return () => clearTimeout(timer);
-    // }, [count]);
-
-    ////////////////////////////
 
     return !isQuizEnd ? (
         <div className="questions">
