@@ -37,12 +37,11 @@ Users should be able to:
 | --------------------------------------------------------------------- |
 | ![Desktop Main_page](./src/assets/screenshots/desktop_mainScreen.png) |
 
-| Mobile Welcome Screen                                                         | Mobile Rules Screen                                                          |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![Mobile welcome screen](./src/assets/screenshots/mobile_startScreen.png)     | ![Mobile Rules Screen](./src/assets/screenshots/mobile_rulesScreen.png)      |
-| Mobile Question Screen                                                        | Mobile End Screen                                                            |
-| -----------------------------------------------------------------------       | ---------------------------------------------------------------------------- |
-| ![Mobile question screen](./src/assets/screenshots/mobile_questionScreen.png) | ![Mobile end screen](./src/assets/screenshots/mobile_endScreen.png)          |
+| Mobile Welcome Screen                                                         | Mobile Rules Screen                                                     |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| ![Mobile welcome screen](./src/assets/screenshots/mobile_startScreen.png)     | ![Mobile Rules Screen](./src/assets/screenshots/mobile_rulesScreen.png) |
+| Mobile Question Screen                                                        | Mobile End Screen                                                       |
+| ![Mobile question screen](./src/assets/screenshots/mobile_questionScreen.png) | ![Mobile end screen](./src/assets/screenshots/mobile_endScreen.png)     |
 
 ### Links
 
