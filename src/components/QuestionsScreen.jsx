@@ -4,7 +4,7 @@ import EndScreen from "./EndScreen";
 import "./styles/Questions.css";
 
 function QuestionsScreen() {
-    const time = 5;
+    const time = 30;
     const [count, setCount] = useState(time);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isQuizEnd, setIsQuizEnd] = useState(false);
@@ -17,7 +17,6 @@ function QuestionsScreen() {
         }
 
         const questionNumber = currentQuestion + 1;
-        // console.log(questionNumber);
         if (questionNumber < questions.length) {
             setCurrentQuestion(questionNumber);
             setCount(time);
@@ -41,11 +40,10 @@ function QuestionsScreen() {
             if (questionNumber < questions.length) {
                 setCurrentQuestion(questionNumber);
                 setCount(time);
-                // console.log("que num = ", questionNumber);
             } else {
                 setIsQuizEnd(true);
             }
-        }, 5000);
+        }, 30000);
 
         return () => clearTimeout(timer);
     }, [currentQuestion]);
