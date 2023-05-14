@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Time Bound Quiz Web UI From Merchify in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project I have made a quiz game in which there is a time bound and a welcome screen, a rules explaining page, the questions screen, and the end screen.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+-   [Overview](#overview)
+    -   [The Theme](#the-theme)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The Theme
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+-   A Quiz Detail Screen from which the user can start the quiz.
+    -   A simple UI where the user can see information about the quiz and start the quiz will suffice.
+-   A Quiz Attempt Screen where the user will take the quiz.
+    -   The quiz will have multiple MCQ questions with one correct answer for each question.
+    -   The quiz must be time bound, i.e. the user will have 30 seconds to complete the quiz, after which it should auto submit.
+-   Play the trailer when the image card is clicked and stop the trailer when again clicked on the image.
+    -   A simple UI showing the user’s score.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshot.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Desktop Main Page                                                     |
+| --------------------------------------------------------------------- |
+| ![Desktop Main_page](./src/assets/screenshots/desktop_mainScreen.png) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Mobile Welcome Screen                                                         | Mobile Rules Screen                                                          |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Mobile welcome screen](./src/assets/screenshots/mobile_startScreen.png)     | ![Mobile Rules Screen](./src/assets/screenshots/mobile_rulesScreen.png)      |
+| Mobile Question Screen                                                        | Mobile End Screen                                                            |
+| -----------------------------------------------------------------------       | ---------------------------------------------------------------------------- |
+| ![Mobile question screen](./src/assets/screenshots/mobile_questionScreen.png) | ![Mobile end screen](./src/assets/screenshots/mobile_endScreen.png)          |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Links
 
-### `npm run eject`
+-   [Github Solution](https://github.com/ShivamManiMaurya/Time-bound-Quiz-Web-UI-from-Merchify)
+-   [Live Site](https://lucky-torte-4691b5.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   Mobile First Approach
+-   HTML5
+-   CSS custom properties
+-   Flexbox
+-   JavaScript
+-   [React](https://reactjs.org/) - JS library
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### What I learned
 
-## Learn More
+-   Get more familiar with useEffect hook and its different ways.
+-   Get more familiar with transition and transform CSS property.
+-   Get more familiar with animations in CSS.
+-   Get more familiar with mobile first approach.
+-   Get more familiar with setTimeout andn setInterval functions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Continued development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In this project, I also wanted to do a round or linear progress bar for the timer and I also wanted to add randomised questions and answers when restarted the quiz.
 
-### Code Splitting
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   [Akshay Saini](https://www.youtube.com/@akshaymarch7) - Akshay Saini bhaiya helped me in understanding javascript concepts
+-   [Sonny Sangha](https://www.youtube.com/@SonnySangha) - A very special thanks to Sonny Sangha as well who helped me in getting more familiar with react useEffect hook and other concepts as well.
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Website - [Shivam Maurya](https://shivammanimaurya.github.io/my_portfolio_website/)
+-   GitHub Page - [Shivam Maurya GitHub](https://github.com/ShivamManiMaurya)
+-   Linkedin - [@shivammanimaurya](https://www.linkedin.com/in/shivammanimaurya)

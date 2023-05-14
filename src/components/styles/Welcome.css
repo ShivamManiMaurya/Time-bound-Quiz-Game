@@ -161,3 +161,35 @@
       width: 220px;
     }
   }
+
+  @media only screen and (min-width: 500px) {
+    .rules-div {
+      margin: 0 20rem
+    }
+  }
+ 
+
+  @media only screen and (min-width: 778px){
+    .rules-div {
+      margin: 0 30rem;
+    }
+
+    .rules-start-btn {
+      width: 300px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-top: 2rem;
+      margin-bottom: -3rem;
+    }
+
+    .welcome-rules-div {
+      margin-bottom: -5rem;
+    }
+
+    .rules-whole-div {
+      margin-top: 5rem;
+    }
+  }

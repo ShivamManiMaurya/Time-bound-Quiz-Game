@@ -131,3 +131,27 @@
     background: rgb(134, 1, 1);
     box-shadow: 0px 0px 25px gray;
 }
+
+@media only screen and (min-width: 778px){
+    .questions {
+        bottom: 5rem;
+    }
+    .question-whole {
+        width: 20rem;
+        height: 50rem;
+        margin: auto;
+    }
+
+    .timer {
+        width: 100px;
+        height: 100px;
+    }
+
+    .option-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:row;
+    }
+
+}
