@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Time-bound-Quiz-Web-UI-from-Merchify/static/css/main.ad036f6f.css",
+    "main.js": "/Time-bound-Quiz-Web-UI-from-Merchify/static/js/main.94991bf7.js",
+    "static/media/coverImg.jpg": "/Time-bound-Quiz-Web-UI-from-Merchify/static/media/coverImg.4224367f268ce95a46d0.jpg",
+    "index.html": "/Time-bound-Quiz-Web-UI-from-Merchify/index.html",
+    "main.ad036f6f.css.map": "/Time-bound-Quiz-Web-UI-from-Merchify/static/css/main.ad036f6f.css.map",
+    "main.94991bf7.js.map": "/Time-bound-Quiz-Web-UI-from-Merchify/static/js/main.94991bf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad036f6f.css",
+    "static/js/main.94991bf7.js"
+  ]
+}
