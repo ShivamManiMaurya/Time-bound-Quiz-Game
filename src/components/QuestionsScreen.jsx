@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import questions from "./questionsData";
 import EndScreen from "./EndScreen";
+import "./styles/Questions.css";
 
 function QuestionsScreen() {
     const time = 5;
@@ -16,7 +17,7 @@ function QuestionsScreen() {
         }
 
         const questionNumber = currentQuestion + 1;
-        console.log(questionNumber);
+        // console.log(questionNumber);
         if (questionNumber < questions.length) {
             setCurrentQuestion(questionNumber);
             setCount(time);
@@ -40,7 +41,7 @@ function QuestionsScreen() {
             if (questionNumber < questions.length) {
                 setCurrentQuestion(questionNumber);
                 setCount(time);
-                console.log("que num = ", questionNumber);
+                // console.log("que num = ", questionNumber);
             } else {
                 setIsQuizEnd(true);
             }
@@ -51,26 +52,34 @@ function QuestionsScreen() {
 
     return !isQuizEnd ? (
         <div className="questions">
-            <h1>{count}</h1>
-            <div className="question-section">
-                <div className="question-count">
-                    <span>Question 1</span>/{questions.length}
+            <div className="question-whole">
+                <div className="timer">
+                    <h1>{count}</h1>
                 </div>
-                <div className="question-text">
-                    <h4>{questions[currentQuestion].question}</h4>
+                <div className="question-section">
+                    <div className="question-number">
+                        <h4>
+                            <span>Question {currentQuestion + 1}</span>/
+                            {questions.length}
+                        </h4>
+                    </div>
+                    <div className="question-text">
+                        <h4>{questions[currentQuestion].question}</h4>
+                    </div>
                 </div>
-            </div>
-            <div className="option-section">
-                {questions[currentQuestion].options.map((options) => {
-                    return (
-                        <button
-                            key={options.optId}
-                            onClick={() => handleAnswer(options.isCorrect)}
-                        >
-                            {options.optionText}
-                        </button>
-                    );
-                })}
+                <div className="option-section">
+                    {questions[currentQuestion].options.map((options) => {
+                        return (
+                            <button
+                                className="option-btn"
+                                key={options.optId}
+                                onClick={() => handleAnswer(options.isCorrect)}
+                            >
+                                {options.optionText}
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     ) : (
